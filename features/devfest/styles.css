@@ -20,8 +20,11 @@
   transform: none;
 }
 .registration-note {
-  margin: 12px 0 0;
+  margin: 0;
+  padding: 0 20px 20px;
   font-size: 14px;
+  line-height: 20px;
+  text-align: center;
   color: var(--secondary);
 }
 .header {
@@ -110,6 +113,7 @@
   align-items: center;
 }
 .hero-copy {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -161,15 +165,17 @@
   overflow: hidden;
 }
 .event-details {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 200px));
+  align-items: start;
   justify-content: center;
   gap: 9px;
+  padding-inline: 12px;
 }
 .event-details > div,
 .event-details > a {
-  width: 200px;
-  padding: 20px;
+  min-width: 0;
+  padding: 20px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,11 +184,18 @@
   font-size: 20px;
   line-height: 30px;
 }
+.event-details img {
+  width: 48px;
+  height: 48px;
+  flex: none;
+}
 .countdown {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  padding: 8px 16px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  width: min(100%, 320px);
+  margin-inline: auto;
+  padding: 8px 16px 16px;
   color: var(--secondary);
   font-size: 16px;
   line-height: 24px;
@@ -192,11 +205,10 @@
   flex-direction: column;
   text-align: center;
   min-width: 28px;
+  font-variant-numeric: tabular-nums;
 }
 .ticket-divider {
-  height: 1px;
-  overflow: hidden;
-  transform: rotate(180deg);
+  border-top: 1px dashed var(--border);
 }
 .event-actions {
   display: flex;
@@ -693,7 +705,7 @@
 }
 @media (max-width: 1250px) {
   .hero {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   .hero h1 {
     font-size: clamp(48px, 5.8vw, 76px);
@@ -736,6 +748,20 @@
   }
 }
 @media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 5.4vw, 54px);
+    letter-spacing: -1.5px;
+  }
+  .event-details > div,
+  .event-details > a {
+    font-size: 18px;
+    line-height: 26px;
+    gap: 16px;
+  }
   .header nav {
     gap: 0;
     font-size: 14px;
@@ -944,8 +970,6 @@
   }
   .event-details > div,
   .event-details > a {
-    width: 50%;
-    max-width: 200px;
     padding: 20px 8px;
     gap: 16px;
     font-size: 18px;
@@ -1113,6 +1137,11 @@
   }
 }
 @media (max-width: 360px) {
+  .event-details > div,
+  .event-details > a {
+    font-size: 16px;
+    line-height: 24px;
+  }
   .year-tabs {
     gap: 6px;
   }

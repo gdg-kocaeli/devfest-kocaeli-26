@@ -45,9 +45,7 @@ export function HeroSection() {
             </ExternalLink>
           </div>
           <Countdown startsAt={event.startsAt} />
-          <div className="ticket-divider">
-            <AssetImage image={assets.hero.ticketDivider} />
-          </div>
+          <div className="ticket-divider" aria-hidden="true" />
           <div className="event-actions">
             <ExternalLink className="button primary" href={event.ticketUrl}>
               Biletini Al
