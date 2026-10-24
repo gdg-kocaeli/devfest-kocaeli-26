@@ -9,10 +9,17 @@ import { ProgramSection } from "@/features/devfest/components/program/program-se
 import { SiteHeader } from "@/features/devfest/components/site-header";
 import { SpeakersSection } from "@/features/devfest/components/speakers/speakers-section";
 import { SponsorsSection } from "@/features/devfest/components/sponsors/sponsors-section";
+import { eventStructuredData } from "@/features/devfest/seo";
 
 export default function Home() {
   return (
     <div className="site-shell">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventStructuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <a href="#icerik" className="skip-link">
         İçeriğe geç
       </a>

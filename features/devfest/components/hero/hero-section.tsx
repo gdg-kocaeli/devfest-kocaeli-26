@@ -18,12 +18,11 @@ export function HeroSection() {
       <div className="hero-copy">
         <div className="hero-intro">
           <p className="eyebrow">GOOGLE DEVELOPER GROUPS KOCAELİ SUNAR</p>
-          <h1 id="hero-title">
+          <h1 id="hero-title" aria-label={event.name}>
             <span>DEVFEST</span> {event.year}
           </h1>
           <p className="hero-description">
-            Teknolojiyi keşfet, birlikte üret. Konuşmalar, atölyeler ve yeni
-            bağlantılar için Kocaeli’de buluş.
+            {event.introduction}
           </p>
         </div>
         <div className="event-card">
@@ -59,6 +58,7 @@ export function HeroSection() {
               </a>
             )}
           </div>
+          <p className="registration-note">{event.registrationLabel}</p>
         </div>
       </div>
       <div className="hero-art">

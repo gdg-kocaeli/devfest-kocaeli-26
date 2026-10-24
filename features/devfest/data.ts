@@ -10,17 +10,28 @@ import type {
 
 export const event = {
   name: "DevFest Kocaeli 2026",
-  title: "DevFest Kocaeli 2026 | Google Developer Groups",
+  title: "DevFest Kocaeli 2026 | 14 Kasım, Emexotel | GDG Kocaeli",
   description:
-    "14 Kasım 2026’da Emexotel’de buluşuyoruz. DevFest Kocaeli: teknoloji, konuşmalar, atölyeler ve yeni bağlantılar.",
+    "DevFest Kocaeli 2026, 14 Kasım’da Emexotel’de! GDG Kocaeli ile yapay zeka, web, mobil ve bulut teknolojileri üzerine konuşmalar. Katılım ücretsiz, kayıt gerekli.",
   year: 2026,
   startsAt: "2026-11-14T10:00:00+03:00",
+  endsAt: "2026-11-14T18:00:00+03:00",
   dateLabel: "14 Kasım 2026",
-  timeLabel: "10.00",
+  timeLabel: "10.00–18.00",
+  registrationLabel: "Katılım ücretsizdir, kayıt gereklidir.",
+  introduction:
+    "GDG Kocaeli ile yapay zeka, web, mobil ve bulut teknolojilerini keşfet. Teknik konuşmalar ve yeni bağlantılar için DevFest Kocaeli 2026’da buluş.",
   venue: {
     name: "Emexotel",
     lines: ["Emexotel", "Kocaeli"],
     mapUrl: "https://maps.app.goo.gl/b4X5iqoPuJ5PgmL26",
+    address: {
+      streetAddress: "Ömer Türkçakal Bulvarı No:26",
+      addressLocality: "İzmit",
+      addressRegion: "Kocaeli",
+      postalCode: "41040",
+      addressCountry: "TR",
+    },
   },
   ticketUrl: "https://gathin.com/events/devfest-kocaeli-2026",
   sponsorUrl:

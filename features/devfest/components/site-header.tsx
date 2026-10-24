@@ -68,7 +68,7 @@ export function SiteHeader() {
         </svg>
       </button>
       <nav id="site-navigation" className={menuOpen ? "is-open" : undefined} aria-label="Ana menü">
-        <span className="mobile-menu-label">DevFest Kocaeli'yi Keşfet</span>
+        <span className="mobile-menu-label">DevFest Kocaeli’yi Keşfet</span>
         {navigation.filter(
           (item) =>
             (item.href !== "#konusmacilar" || featuredSpeakers.length > 0) &&
