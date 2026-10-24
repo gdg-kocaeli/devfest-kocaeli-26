@@ -69,7 +69,7 @@ export function GalleryLightbox({
             <path d="m6 6 12 12M18 6 6 18" />
           </svg>
         </button>
-        <AssetImage image={images[index]} sizes="100vw" />
+        <AssetImage key={index} image={images[index]} sizes="100vw" />
         {images.length > 1 && (
           <>
             <button

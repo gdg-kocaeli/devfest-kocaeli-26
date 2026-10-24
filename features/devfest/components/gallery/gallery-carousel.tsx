@@ -73,17 +73,22 @@ export function GalleryCarousel({ years, controls }: GalleryCarouselProps) {
             }
           }}
         >
-          {Array.from({ length: visibleCount }, (_, slot) => {
-            const image = images[(slot + offset) % imageCount];
-            const position = slot + Math.floor((5 - visibleCount) / 2);
+          {images.map((image, imageIndex) => {
+            const slot = (imageIndex - offset + imageCount) % imageCount;
+            const hidden = slot >= visibleCount;
+            const position = hidden
+              ? slot === imageCount - 1 ? -1 : 5
+              : slot + Math.floor((5 - visibleCount) / 2);
             return (
               <button
                 type="button"
-                className={`gallery-image slot-${position}`}
-                key={slot}
+                className={`gallery-image slot-${position}${hidden ? " is-hidden" : ""}`}
+                key={`${year}-${imageIndex}`}
+                aria-hidden={hidden}
+                tabIndex={hidden ? -1 : 0}
                 aria-label={`${image.alt} — büyüt`}
                 aria-haspopup="dialog"
-                onClick={() => setExpandedIndex((slot + offset) % imageCount)}
+                onClick={() => setExpandedIndex(imageIndex)}
               >
                 <AssetImage
                   image={image}
