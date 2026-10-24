@@ -6,6 +6,26 @@ export const siteUrl = new URL(
 ).origin;
 export const socialImagePath = "/opengraph-image";
 
+const organizer = {
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  name: "GDG Kocaeli",
+  url: event.communityUrl,
+  sameAs: socialLinks.map((link) => link.url),
+};
+
+export const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: `${siteUrl}/`,
+  name: event.name,
+  description: event.description,
+  inLanguage: "tr-TR",
+  publisher: organizer,
+  about: { "@id": `${siteUrl}/#event` },
+};
+
 export const eventStructuredData = {
   "@context": "https://schema.org",
   "@type": "Event",
@@ -26,12 +46,7 @@ export const eventStructuredData = {
     hasMap: event.venue.mapUrl,
     address: { "@type": "PostalAddress", ...event.venue.address },
   },
-  organizer: {
-    "@type": "Organization",
-    name: "GDG Kocaeli",
-    url: event.communityUrl,
-    sameAs: socialLinks.map((link) => link.url),
-  },
+  organizer,
   offers: {
     "@type": "Offer",
     url: event.ticketUrl,
