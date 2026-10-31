@@ -20,6 +20,16 @@ npm run dev
 
 Open [localhost:3000](http://localhost:3000) in your browser.
 
+## Photo Modal
+
+Copy `.env.example` to `.env.local` and set:
+
+```dotenv
+PHOTO_BOOTH_AUTO_OPEN=true
+```
+
+Set this to `false` (or leave it unset) to hide the photo modal and the “Fotoğrafını paylaş” button entirely. When `true`, the modal opens on page load and the button can reopen it after closing. Restart the development server after changing this setting; production changes require a new build and deployment.
+
 ## Available Commands
 
 ```sh
