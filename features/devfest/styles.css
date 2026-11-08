@@ -404,10 +404,10 @@
 .program-backdrop {
   position: absolute;
   width: 100vw;
-  height: 811px;
+  height: 100%;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  transform: translateX(-50%);
   z-index: -1;
   pointer-events: none;
 }
@@ -433,6 +433,7 @@
 .schedule-grid {
   display: grid;
   grid-template-columns: repeat(2, 485px);
+  align-items: start;
   gap: 64px;
   justify-content: center;
 }
@@ -443,7 +444,7 @@
   background: #ffffffa3;
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 16px;
 }
 .schedule-heading {
   padding-inline: 24px;
@@ -454,11 +455,11 @@
 .schedule-row {
   display: flex;
   align-items: center;
-  gap: 48px;
-  height: 80px;
+  gap: 16px;
+  padding-block: 8px;
 }
 .schedule-time {
-  width: 160px;
+  width: 110px;
   text-align: center;
   flex: none;
 }
@@ -490,8 +491,9 @@
   color: #0fd10c;
 }
 .session-info {
-  width: 125px;
-  flex: none;
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
 }
 .session-info > span {
   display: block;
@@ -1088,10 +1090,13 @@
   }
   .schedule-grid {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
     width: 100%;
     gap: 24px;
   }
   .schedule-card {
+    display: flex;
+    flex-direction: column;
     padding: 24px 16px;
   }
   .schedule-row {
@@ -1112,7 +1117,6 @@
     min-width: 0;
   }
   .program-backdrop {
-    height: 110%;
     opacity: 0.8;
   }
   .year-tabs {

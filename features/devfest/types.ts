@@ -18,7 +18,7 @@ export type Speaker = Readonly<{
   portrait: "standard" | "cropped" | "wide";
 }>;
 
-export type SessionKind = "keynote" | "talk" | "break";
+export type SessionKind = "keynote" | "talk" | "break" | "registration" | "networking";
 export type Session = Readonly<{
   id: string;
   title: string;

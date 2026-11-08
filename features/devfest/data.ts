@@ -15,9 +15,9 @@ export const event = {
     "DevFest Kocaeli 2026, 14 Kasım’da Emexotel’de! GDG Kocaeli ile yapay zeka, web, mobil ve bulut teknolojileri üzerine konuşmalar. Katılım ücretsiz, kayıt gerekli.",
   year: 2026,
   startsAt: "2026-11-14T10:00:00+03:00",
-  endsAt: "2026-11-14T18:00:00+03:00",
+  endsAt: "2026-11-14T16:30:00+03:00",
   dateLabel: "14 Kasım 2026",
-  timeLabel: "10.00–18.00",
+  timeLabel: "10.00–16.30",
   registrationLabel: "Katılım ücretsizdir, kayıt gereklidir.",
   introduction:
     "GDG Kocaeli ile yapay zeka, web, mobil ve bulut teknolojilerini keşfet. Teknik konuşmalar ve yeni bağlantılar için DevFest Kocaeli 2026’da buluş.",
@@ -138,10 +138,37 @@ export const featuredSpeakers = speakers
 export const sessionLabels = {
   keynote: "KEYNOTE",
   talk: "SUNUM",
-  break: "MOLA",
+  break: "",
+  registration: "KAYIT",
+  networking: "NETWORKING",
 } as const satisfies Record<SessionKind, string>;
 
-export const tracks: readonly Track[] = [];
+export const tracks: readonly Track[] = [
+  {
+    id: "salon-1",
+    title: "Salon 1",
+    sessions: [
+      { id: "kayit", title: "Kayıt", kind: "registration", dateLabel: "14 Kasım", startTime: "10:00", endTime: "10:30", speakerIds: [] },
+      { id: "acilis", title: "Keynote", kind: "keynote", dateLabel: "14 Kasım", startTime: "10:30", endTime: "10:45", speakerIds: [], speakerNames: ["GDG Kocaeli Organizers"] },
+      { id: "multi-agent", title: "Architecting Multi Agent Systems", kind: "talk", dateLabel: "14 Kasım", startTime: "10:45", endTime: "11:15", speakerIds: ["nisanur-ilhan"] },
+      { id: "flutter-genui", title: "Beyond the Chatbox: Dynamic GenUI with Flutter & Maps", kind: "talk", dateLabel: "14 Kasım", startTime: "11:30", endTime: "12:00", speakerIds: ["levent-kantaroglu"] },
+      { id: "business-ai-agents", title: "From Idea to Execution: Unlocking Business Value with AI Agents", kind: "talk", dateLabel: "14 Kasım", startTime: "12:00", endTime: "12:30", speakerIds: ["hale-nur-kumcuoglu"] },
+      { id: "lightning-talks", title: "Lightning Talks", kind: "networking", dateLabel: "14 Kasım", startTime: "12:30", endTime: "13:00", speakerIds: [] },
+      { id: "post-ai", title: "Post-AI Industry Adaptation: How Must Developers Evolve?", kind: "talk", dateLabel: "14 Kasım", startTime: "14:15", endTime: "14:45", speakerIds: ["serkan-alc", "batuhan-yalcin"] },
+      { id: "on-device-llm", title: "Beyond the Cloud: High-Performance On-Device Web LLM Inference with LiteRT-LM", kind: "talk", dateLabel: "14 Kasım", startTime: "15:00", endTime: "15:30", speakerIds: ["ege-kaan-isik"] },
+      { id: "agentic-ai-workflows", title: "Building Agentic AI Workflows with xAI on Gemini Enterprise Agent Platform (formerly Vertex AI): From Code to Action", kind: "talk", dateLabel: "14 Kasım", startTime: "15:30", endTime: "16:00", speakerIds: ["mannai-mortadha"] },
+      { id: "kapanis", title: "Kapanış & Çekilişler", kind: "keynote", dateLabel: "14 Kasım", startTime: "16:00", endTime: "16:30", speakerIds: [] },
+    ],
+  },
+  {
+    id: "salon-2",
+    title: "Salon 2",
+    sessions: [
+      { id: "google-adk", title: "Build Your Coding Agent with Google ADK", kind: "talk", dateLabel: "14 Kasım", startTime: "11:30", endTime: "12:30", speakerIds: ["omar-elcircevi"] },
+      { id: "chaos-engineering", title: "The Day We Killed 100% of Our Pods: Self-Service Chaos Engineering for 1000+ Microservices at a Bank", kind: "talk", dateLabel: "14 Kasım", startTime: "14:15", endTime: "14:45", speakerIds: ["mert-polat"] },
+    ],
+  },
+];
 
 export const programTracks = tracks.filter((track) => track.sessions.length > 0);
 export const hasProgram = programTracks.length > 0;

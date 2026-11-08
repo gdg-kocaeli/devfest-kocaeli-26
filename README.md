@@ -51,6 +51,8 @@ Edit `features/devfest/data.ts` to update event details, navigation, speakers, s
 
 Speaker and program sections appear automatically when their corresponding data is available. Sponsor tiers with no sponsors are hidden.
 
+Set `PROGRAM_AUTO_OPEN=true` in `.env.local` to open the homepage at the program section automatically. Set it to `false` to start at the top. Existing section links are preserved. Restart the development server after changing it; production deployments need a new build.
+
 ## Contributors
 
 Special thanks to [@mhakkaynak](https://github.com/mhakkaynak) for contributing to this project.

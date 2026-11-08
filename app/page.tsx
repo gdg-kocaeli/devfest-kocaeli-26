@@ -6,6 +6,8 @@ import {
   HeroSection,
 } from "@/features/devfest/components/hero/hero-section";
 import { ProgramSection } from "@/features/devfest/components/program/program-section";
+import { ProgramAutoOpen } from "@/features/devfest/components/program/program-auto-open";
+import { hasProgram } from "@/features/devfest/data";
 import { SiteHeader } from "@/features/devfest/components/site-header";
 import { SpeakersSection } from "@/features/devfest/components/speakers/speakers-section";
 import { SponsorsSection } from "@/features/devfest/components/sponsors/sponsors-section";
@@ -32,6 +34,7 @@ export default function Home() {
       </a>
       <HeroBackdrop />
       <SiteHeader />
+      {process.env.PROGRAM_AUTO_OPEN === "true" && hasProgram && <ProgramAutoOpen />}
       {process.env.PHOTO_BOOTH_AUTO_OPEN === "true" && <PhotoBooth autoOpen />}
       <main id="icerik" className="container main-content">
         <HeroSection />

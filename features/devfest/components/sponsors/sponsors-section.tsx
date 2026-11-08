@@ -1,4 +1,4 @@
-import { event, sponsorGroups } from "../../data";
+import { sponsorGroups } from "../../data";
 import { AssetImage } from "../shared/asset-image";
 import { ExternalLink } from "../shared/external-link";
 
@@ -18,9 +18,6 @@ export function SponsorsSection() {
       <div className="sponsor-intro">
         <p className="section-label">SPONSORLAR</p>
         <h2 id="sponsor-title">Birlikte mümkün.</h2>
-        <ExternalLink href={event.sponsorUrl} className="text-link">
-          → Sponsor olmak ister misiniz?
-        </ExternalLink>
       </div>
       <div className="sponsor-groups">
         {visibleGroups.map((group) => (

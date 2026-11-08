@@ -1,14 +1,12 @@
-import type { CSSProperties } from "react";
 import { sessionLabels } from "../../data";
 import type { Speaker, Track } from "../../types";
 
 type ScheduleCardProps = {
   track: Track;
   speakersById: ReadonlyMap<string, Speaker>;
-  timeSlots: readonly string[];
 };
 
-export function ScheduleCard({ track, speakersById, timeSlots }: ScheduleCardProps) {
+export function ScheduleCard({ track, speakersById }: ScheduleCardProps) {
   return (
     <article className="schedule-card">
       <div className="schedule-heading">
@@ -18,9 +16,6 @@ export function ScheduleCard({ track, speakersById, timeSlots }: ScheduleCardPro
         <div
           className="schedule-row"
           key={session.id}
-          style={{
-            "--schedule-session-row": `${timeSlots.indexOf(session.startTime) + 2} / ${timeSlots.filter((start) => start < session.endTime).length + 2}`,
-          } as CSSProperties}
         >
           <div className="schedule-time">
             <span>{session.dateLabel}</span>
