@@ -2,6 +2,7 @@ import { assets } from "../../assets";
 import { programTracks, speakers } from "../../data";
 import { AssetImage } from "../shared/asset-image";
 import { ScheduleCard } from "./schedule-card";
+import { ProgramSchedule } from "./program-schedule";
 
 export function ProgramSection() {
   if (programTracks.length === 0) return null;
@@ -28,7 +29,7 @@ export function ProgramSection() {
         <h2 id="program-title">Program</h2>
         <p className="section-description">Gününü planla, keşfe yer aç.</p>
       </div>
-      <div className="schedule-grid">
+      <ProgramSchedule tracks={programTracks.map(({ id, title }) => ({ id, title }))}>
         {programTracks.map((track) => (
           <ScheduleCard
             key={track.id}
@@ -36,7 +37,7 @@ export function ProgramSection() {
             speakersById={speakersById}
           />
         ))}
-      </div>
+      </ProgramSchedule>
     </section>
   );
 }

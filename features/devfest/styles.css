@@ -430,6 +430,12 @@
 .program-bottom {
   bottom: 0;
 }
+.schedule-switcher {
+  display: none;
+}
+.schedule-panel {
+  min-width: 0;
+}
 .schedule-grid {
   display: grid;
   grid-template-columns: repeat(2, 485px);
@@ -899,6 +905,37 @@
   }
 }
 @media (max-width: 700px) {
+  .schedule-switcher {
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #dce5f5;
+    border-radius: 16px;
+    background: #ffffffb3;
+  }
+  .schedule-switcher button {
+    flex: 1;
+    min-height: 44px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--secondary);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .schedule-switcher button[aria-pressed="true"] {
+    background: var(--blue);
+    color: white;
+  }
+  .schedule-switcher button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+  }
+  .schedule-panel[data-active="false"] {
+    display: none;
+  }
   :root {
     --section-gap: 64px;
   }
