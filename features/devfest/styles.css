@@ -271,12 +271,13 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: min(100%, 960px);
+  width: min(100%, 1100px);
 }
 .sponsor-group {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
   width: 100%;
 }
 .sponsor-tier-title {
@@ -293,13 +294,36 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
-  min-width: 0;
   width: 100%;
 }
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 351px;
+  min-width: 0;
+  height: 80px;
+}
 .sponsor-logos img {
+  display: block;
   max-width: 100%;
+  width: auto;
   height: auto;
-  flex: none;
+  max-height: 80px;
+  object-fit: contain;
+}
+.sponsor-tier-partners .sponsor-logo {
+  flex: 0 0 128px;
+  height: 96px;
+}
+.sponsor-tier-partners .sponsor-logos img {
+  max-height: 96px;
+}
+.sponsor-name {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
 }
 .speakers {
   display: grid;
@@ -330,13 +354,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   text-align: center;
   gap: 16px;
 }
 .speaker-photo {
   width: 200px;
   height: 211px;
+  flex-shrink: 0;
   border-radius: 9999px;
   overflow: hidden;
 }
@@ -1017,18 +1042,13 @@
   .sponsors {
     gap: 32px;
   }
-  .sponsor-tier-title {
-    font-size: 20px;
-    line-height: 28px;
-  }
+
   .sponsor-intro h2,
   h2 {
     font-size: 32px;
     line-height: 40px;
   }
-  .sponsor-logos {
-    gap: 24px;
-  }
+
   .speaker-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px 20px;

@@ -34,20 +34,36 @@ export function SponsorsSection() {
               {group.title}
             </h3>
             {group.divider && <AssetImage image={group.divider} />}
-            <div className="sponsor-logos">
-              {group.sponsors.map((sponsor) =>
-                sponsor.url ? (
-                  <ExternalLink key={sponsor.id} href={sponsor.url}>
-                    <AssetImage image={sponsor.image} alt={sponsor.name} />
-                  </ExternalLink>
-                ) : (
+            <div
+              className="sponsor-logos"
+              role="region"
+              aria-label={`${group.title} listesi`}
+            >
+              {group.sponsors.map((sponsor) => {
+                const content = sponsor.image ? (
                   <AssetImage
-                    key={sponsor.id}
                     image={sponsor.image}
                     alt={sponsor.name}
+                    sizes={group.id === "partners" ? "128px" : "(max-width: 400px) 100vw, 351px"}
                   />
-                ),
-              )}
+                ) : (
+                  <span className="sponsor-name">{sponsor.name}</span>
+                );
+
+                return sponsor.url ? (
+                  <ExternalLink
+                    key={sponsor.id}
+                    href={sponsor.url}
+                    className="sponsor-logo"
+                  >
+                    {content}
+                  </ExternalLink>
+                ) : (
+                  <div key={sponsor.id} className="sponsor-logo">
+                    {content}
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}

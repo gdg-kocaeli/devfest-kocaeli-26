@@ -1,6 +1,20 @@
+import egeKaanIsikPortrait from "../../public/assets/devfest/speakers/ege-kaan-isik.jpg";
+import haleNurKumcuogluPortrait from "../../public/assets/devfest/speakers/hale-nur-kumcuoglu.png";
+import leventKantarogluPortrait from "../../public/assets/devfest/speakers/levent-kantaroglu.png";
+import mannaiMortadhaPortrait from "../../public/assets/devfest/speakers/mannai-mortadha.jpg";
+import mertPolatPortrait from "../../public/assets/devfest/speakers/mert-polat.jpg";
+import nisanurIlhanPortrait from "../../public/assets/devfest/speakers/nisanur-ilhan.jpg";
+import omarElcirceviPortrait from "../../public/assets/devfest/speakers/omar-elcircevi.jpg";
+import serkanAlcPortrait from "../../public/assets/devfest/speakers/serkan-alc.jpg";
 import heroCharacters from "../../public/assets/devfest/hero/characters.png";
 import speakersMicrophone from "../../public/assets/devfest/speakers/microphone.png";
+import sponsorsEcs from "../../public/assets/devfest/sponsors/ecs.png";
+import sponsorsJustEnglish from "../../public/assets/devfest/sponsors/just-english.png";
+import sponsorsFrekans from "../../public/assets/devfest/sponsors/frekans.jpg";
+import sponsorsJetbrains from "../../public/assets/devfest/sponsors/jetbrains.png";
 import sponsorsGoogleForDevs from "../../public/assets/devfest/sponsors/google-for-devs.png";
+import sponsorsKouTeknopark from "../../public/assets/devfest/sponsors/kocaeli-universitesi-teknopark-logosu.png";
+import sponsorsKocaeliTanik from "../../public/assets/devfest/sponsors/kocaeli-tanik.png";
 import programAbstractWaves from "../../public/assets/devfest/program/abstract-waves.png";
 import programFadeTop from "../../public/assets/devfest/program/fade-top.png";
 import programFadeBottom from "../../public/assets/devfest/program/fade-bottom.png";
@@ -81,6 +95,60 @@ export const assets = {
     },
   },
   speakers: {
+    haleNurKumcuoglu: {
+      src: haleNurKumcuogluPortrait,
+      width: haleNurKumcuogluPortrait.width,
+      height: haleNurKumcuogluPortrait.height,
+      alt: "Hale Nur Kumcuoglu",
+    },
+    egeKaanIsik: {
+      src: egeKaanIsikPortrait,
+      width: egeKaanIsikPortrait.width,
+      height: egeKaanIsikPortrait.height,
+      alt: "Ege Kaan Işık",
+    },
+    leventKantaroglu: {
+      src: leventKantarogluPortrait,
+      width: leventKantarogluPortrait.width,
+      height: leventKantarogluPortrait.height,
+      alt: "Levent Kantaroğlu",
+    },
+    mannaiMortadha: {
+      src: mannaiMortadhaPortrait,
+      width: mannaiMortadhaPortrait.width,
+      height: mannaiMortadhaPortrait.height,
+      alt: "Mannai Mortadha",
+    },
+    mertPolat: {
+      src: mertPolatPortrait,
+      width: mertPolatPortrait.width,
+      height: mertPolatPortrait.height,
+      alt: "Mert Polat",
+    },
+    nisanurIlhan: {
+      src: nisanurIlhanPortrait,
+      width: nisanurIlhanPortrait.width,
+      height: nisanurIlhanPortrait.height,
+      alt: "Nisanur İlhan",
+    },
+    omarElcircevi: {
+      src: omarElcirceviPortrait,
+      width: omarElcirceviPortrait.width,
+      height: omarElcirceviPortrait.height,
+      alt: "Omar Elcircevi",
+    },
+    serkanAlc: {
+      src: serkanAlcPortrait,
+      width: serkanAlcPortrait.width,
+      height: serkanAlcPortrait.height,
+      alt: "Serkan Alç",
+    },
+    batuhanYalcin: {
+      src: "/assets/devfest/speakers/batuhan-yalcin.jpeg",
+      width: 400,
+      height: 400,
+      alt: "Batuhan Yalçın",
+    },
     microphone: {
       src: speakersMicrophone,
       width: speakersMicrophone.width,
@@ -89,6 +157,42 @@ export const assets = {
     },
   },
   sponsors: {
+    jetbrains: {
+      src: sponsorsJetbrains,
+      width: sponsorsJetbrains.width,
+      height: sponsorsJetbrains.height,
+      alt: "JetBrains",
+    },
+    frekans: {
+      src: sponsorsFrekans,
+      width: sponsorsFrekans.width,
+      height: sponsorsFrekans.height,
+      alt: "Frekans",
+    },
+    justEnglish: {
+      src: sponsorsJustEnglish,
+      width: sponsorsJustEnglish.width,
+      height: sponsorsJustEnglish.height,
+      alt: "Just English",
+    },
+    ecs: {
+      src: sponsorsEcs,
+      width: sponsorsEcs.width,
+      height: sponsorsEcs.height,
+      alt: "Europe Coding School",
+    },
+    kocaeliTanik: {
+      src: sponsorsKocaeliTanik,
+      width: 200,
+      height: 200,
+      alt: "Kocaeli Tanık",
+    },
+    kouTeknopark: {
+      src: sponsorsKouTeknopark,
+      width: 320,
+      height: Math.round((320 * sponsorsKouTeknopark.height) / sponsorsKouTeknopark.width),
+      alt: "Kocaeli Üniversitesi Teknopark",
+    },
     googleForDevs: {
       src: sponsorsGoogleForDevs,
       width: sponsorsGoogleForDevs.width,

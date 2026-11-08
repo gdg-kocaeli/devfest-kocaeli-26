@@ -12,7 +12,7 @@ export type Speaker = Readonly<{
   name: string;
   role: string;
   company: string;
-  image: ImageAsset;
+  image?: ImageAsset;
   profileUrl?: string;
   featured: boolean;
   portrait: "standard" | "cropped" | "wide";
@@ -27,6 +27,7 @@ export type Session = Readonly<{
   startTime: string;
   endTime: string;
   speakerIds: readonly string[];
+  speakerNames?: readonly string[];
 }>;
 
 export type Track = Readonly<{
@@ -36,13 +37,13 @@ export type Track = Readonly<{
 }>;
 
 export type SponsorGroup = Readonly<{
-  id: "platinum" | "gold" | "silver" | "bronze";
+  id: "platinum" | "gold" | "silver" | "bronze" | "partners";
   title: string;
   divider?: ImageAsset;
   sponsors: readonly {
     id: string;
     name: string;
-    image: ImageAsset;
+    image?: ImageAsset;
     url?: string;
   }[];
 }>;

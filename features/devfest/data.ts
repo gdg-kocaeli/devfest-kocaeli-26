@@ -47,9 +47,93 @@ export const navigation = [
   { href: "#iletisim", label: "İletişim" },
 ] as const;
 
-export const speakers: readonly Speaker[] = [];
+export const speakers: readonly Speaker[] = [
+  {
+    id: "batuhan-yalcin",
+    name: "Batuhan Yalçın",
+    role: "Community Lead",
+    company: "Multi Group",
+    image: assets.speakers.batuhanYalcin,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "hale-nur-kumcuoglu",
+    name: "Hale Nur Kumcuoglu",
+    role: "Technical Business Analyst",
+    company: "Vakıfbank",
+    image: assets.speakers.haleNurKumcuoglu,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "ege-kaan-isik",
+    name: "Ege Kaan Işık",
+    role: "Software Development Specialist",
+    company: "Doğuş Teknoloji",
+    image: assets.speakers.egeKaanIsik,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "levent-kantaroglu",
+    name: "Levent Kantaroğlu",
+    role: "Cross-Platform Mobile Team Lead | GDE, Flutter and Dart",
+    company: "Turkish Airlines Technology",
+    image: assets.speakers.leventKantaroglu,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "mannai-mortadha",
+    name: "Mannai Mortadha",
+    role: "Generative AI Engineer | GDE, Cloud AI",
+    company: "SFEIR",
+    image: assets.speakers.mannaiMortadha,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "mert-polat",
+    name: "Mert Polat",
+    role: "LitmusChaos Turkey Chapter Lead | SRE/Chaos Engineer",
+    company: "Intertech",
+    image: assets.speakers.mertPolat,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "nisanur-ilhan",
+    name: "Nisanur İlhan",
+    role: "Data Scientist | GDE, Cloud AI",
+    company: "Turkish Aerospace",
+    image: assets.speakers.nisanurIlhan,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "omar-elcircevi",
+    name: "Omar Elcircevi",
+    role: "Machine Learning Engineer | GDE, Cloud AI",
+    company: "",
+    image: assets.speakers.omarElcircevi,
+    featured: true,
+    portrait: "standard",
+  },
+  {
+    id: "serkan-alc",
+    name: "Serkan Alc",
+    role: "DevRel Manager",
+    company: "Lodos.io",
+    image: assets.speakers.serkanAlc,
+    featured: true,
+    portrait: "standard",
+  },
+];
 
-export const featuredSpeakers = speakers.filter((speaker) => speaker.featured);
+export const featuredSpeakers = speakers
+  .filter((speaker) => speaker.featured)
+  .sort((a, b) => a.name.localeCompare(b.name, "tr"));
 
 export const sessionLabels = {
   keynote: "KEYNOTE",
@@ -87,10 +171,44 @@ export const sponsorGroups: readonly SponsorGroup[] = [
     sponsors: [],
   },
   {
-    id: "bronze",
-    title: "Bronz Sponsorlar",
-    divider: assets.sponsors.bronzeDivider,
-    sponsors: [],
+    id: "partners",
+    title: "Partnerlerimiz",
+    sponsors: [
+      {
+        id: "kou-teknopark",
+        name: "Kocaeli Üniversitesi Teknopark",
+        image: assets.sponsors.kouTeknopark,
+        url: "https://kouteknopark.com",
+      },
+      {
+        id: "ecs",
+        name: "Europe Coding School",
+        image: assets.sponsors.ecs,
+        url: "https://europecodingschool.com/",
+      },
+      {
+        id: "just-english",
+        name: "Just English",
+        image: assets.sponsors.justEnglish,
+      },
+      {
+        id: "kocaeli-tanik",
+        name: "Kocaeli Tanık",
+        image: assets.sponsors.kocaeliTanik,
+        url: "http://kocaelitanik.com/",
+      },
+      {
+        id: "jetbrains",
+        name: "JetBrains",
+        image: assets.sponsors.jetbrains,
+        url: "https://www.jetbrains.com/",
+      },
+      {
+        id: "frekans",
+        name: "Frekans",
+        image: assets.sponsors.frekans,
+      },
+    ],
   },
 ];
 
