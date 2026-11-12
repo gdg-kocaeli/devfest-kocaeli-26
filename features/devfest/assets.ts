@@ -9,6 +9,7 @@ import serkanAlcPortrait from "../../public/assets/devfest/speakers/serkan-alc.j
 import heroCharacters from "../../public/assets/devfest/hero/characters.png";
 import speakersMicrophone from "../../public/assets/devfest/speakers/microphone.png";
 import sponsorsEcs from "../../public/assets/devfest/sponsors/ecs.png";
+import sponsorsCetkinAgency from "../../public/assets/devfest/sponsors/cetkin-agency.png";
 import sponsorsJustEnglish from "../../public/assets/devfest/sponsors/just-english.png";
 import sponsorsFrekans from "../../public/assets/devfest/sponsors/frekans.jpg";
 import sponsorsJetbrains from "../../public/assets/devfest/sponsors/jetbrains.png";
@@ -157,6 +158,12 @@ export const assets = {
     },
   },
   sponsors: {
+    cetkinAgency: {
+      src: sponsorsCetkinAgency,
+      width: sponsorsCetkinAgency.width,
+      height: sponsorsCetkinAgency.height,
+      alt: "Cetkin Agency",
+    },
     jetbrains: {
       src: sponsorsJetbrains,
       width: sponsorsJetbrains.width,

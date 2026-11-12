@@ -59,7 +59,7 @@ export const speakers: readonly Speaker[] = [
   },
   {
     id: "hale-nur-kumcuoglu",
-    name: "Hale Nur Kumcuoglu",
+    name: "Hale Nur Kumcuoglu Erdoğan",
     role: "Technical Business Analyst",
     company: "Vakıfbank",
     image: assets.speakers.haleNurKumcuoglu,
@@ -232,8 +232,14 @@ export const sponsorGroups: readonly SponsorGroup[] = [
       },
       {
         id: "frekans",
-        name: "Frekans",
+        name: "Frekans Creative Studio",
         image: assets.sponsors.frekans,
+      },
+      {
+        id: "cetkin-agency",
+        name: "Cetkin Agency",
+        image: assets.sponsors.cetkinAgency,
+        url: "https://cetkin.agency",
       },
     ],
   },

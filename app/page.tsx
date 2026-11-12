@@ -1,6 +1,7 @@
 import "@/features/devfest/styles.css";
 import { ContactSection } from "@/features/devfest/components/contact/contact-section";
 import { GallerySection } from "@/features/devfest/components/gallery/gallery-section";
+import { OriaverseSection } from "@/features/devfest/components/hero/oriaverse-section";
 import {
   HeroBackdrop,
   HeroSection,
@@ -38,6 +39,7 @@ export default function Home() {
       {process.env.PHOTO_BOOTH_AUTO_OPEN === "true" && <PhotoBooth autoOpen />}
       <main id="icerik" className="container main-content">
         <HeroSection />
+        <OriaverseSection />
         <SponsorsSection />
         <SpeakersSection />
         <ProgramSection />
