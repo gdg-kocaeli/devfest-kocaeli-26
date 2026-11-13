@@ -20,7 +20,7 @@ export const event = {
   timeLabel: "10.00–16.30",
   registrationLabel: "Katılım ücretsizdir, kayıt gereklidir.",
   introduction:
-    "GDG Kocaeli ile yapay zeka, web, mobil ve bulut teknolojilerini keşfet. Teknik konuşmalar ve yeni bağlantılar için DevFest Kocaeli 2026’ da buluş.",
+    "GDG Kocaeli ile yapay zeka, web, mobil ve bulut teknolojilerini keşfet. Teknik konuşmalar ve yeni bağlantılar için DevFest Kocaeli 2026’da buluş.",
   venue: {
     name: "Emexotel",
     lines: ["Emexotel", "Kocaeli"],
