@@ -2,6 +2,7 @@ import "@/features/devfest/styles.css";
 import { ContactSection } from "@/features/devfest/components/contact/contact-section";
 import { GallerySection } from "@/features/devfest/components/gallery/gallery-section";
 import { OriaverseSection } from "@/features/devfest/components/hero/oriaverse-section";
+import { AndroidGiveawaySection } from "@/features/devfest/components/hero/android-giveaway-section";
 import {
   HeroBackdrop,
   HeroSection,
@@ -40,6 +41,7 @@ export default function Home() {
       <main id="icerik" className="container main-content">
         <HeroSection />
         <OriaverseSection />
+        <AndroidGiveawaySection />
         <SponsorsSection />
         <SpeakersSection />
         <ProgramSection />
