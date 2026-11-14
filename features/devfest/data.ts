@@ -154,10 +154,10 @@ export const tracks: readonly Track[] = [
       { id: "flutter-genui", title: "Beyond the Chatbox: Dynamic GenUI with Flutter & Maps", kind: "talk", dateLabel: "14 Kasım", startTime: "11:30", endTime: "12:00", speakerIds: ["levent-kantaroglu"] },
       { id: "business-ai-agents", title: "From Idea to Execution: Unlocking Business Value with AI Agents", kind: "talk", dateLabel: "14 Kasım", startTime: "12:00", endTime: "12:30", speakerIds: ["hale-nur-kumcuoglu"] },
       { id: "lightning-talks", title: "Lightning Talks", kind: "networking", dateLabel: "14 Kasım", startTime: "12:30", endTime: "13:00", speakerIds: [] },
-      { id: "post-ai", title: "Post-AI Industry Adaptation: How Must Developers Evolve?", kind: "talk", dateLabel: "14 Kasım", startTime: "14:15", endTime: "14:45", speakerIds: ["serkan-alc", "batuhan-yalcin"] },
-      { id: "on-device-llm", title: "Beyond the Cloud: High-Performance On-Device Web LLM Inference with LiteRT-LM", kind: "talk", dateLabel: "14 Kasım", startTime: "15:00", endTime: "15:30", speakerIds: ["ege-kaan-isik"] },
-      { id: "agentic-ai-workflows", title: "Building Agentic AI Workflows with xAI on Gemini Enterprise Agent Platform (formerly Vertex AI): From Code to Action", kind: "talk", dateLabel: "14 Kasım", startTime: "15:30", endTime: "16:00", speakerIds: ["mannai-mortadha"] },
-      { id: "kapanis", title: "Kapanış & Çekilişler", kind: "keynote", dateLabel: "14 Kasım", startTime: "16:00", endTime: "16:30", speakerIds: [] },
+      { id: "post-ai", title: "Post-AI Industry Adaptation: How Must Developers Evolve?", kind: "talk", dateLabel: "14 Kasım", startTime: "13:45", endTime: "14:15", speakerIds: ["serkan-alc", "batuhan-yalcin"] },
+      { id: "on-device-llm", title: "Beyond the Cloud: High-Performance On-Device Web LLM Inference with LiteRT-LM", kind: "talk", dateLabel: "14 Kasım", startTime: "14:30", endTime: "15:00", speakerIds: ["ege-kaan-isik"] },
+      { id: "agentic-ai-workflows", title: "Building Agentic AI Workflows with xAI on Gemini Enterprise Agent Platform (formerly Vertex AI): From Code to Action", kind: "talk", dateLabel: "14 Kasım", startTime: "15:00", endTime: "15:30", speakerIds: ["mannai-mortadha"] },
+      { id: "kapanis", title: "Kapanış & Çekilişler", kind: "keynote", dateLabel: "14 Kasım", startTime: "15:30", endTime: "16:00", speakerIds: [] },
     ],
   },
   {
@@ -165,7 +165,7 @@ export const tracks: readonly Track[] = [
     title: "Salon 2",
     sessions: [
       { id: "google-adk", title: "Build Your Coding Agent with Google ADK", kind: "talk", dateLabel: "14 Kasım", startTime: "11:30", endTime: "12:30", speakerIds: ["omar-elcircevi"] },
-      { id: "chaos-engineering", title: "The Day We Killed 100% of Our Pods: Self-Service Chaos Engineering for 1000+ Microservices at a Bank", kind: "talk", dateLabel: "14 Kasım", startTime: "14:15", endTime: "14:45", speakerIds: ["mert-polat"] },
+      { id: "chaos-engineering", title: "The Day We Killed 100% of Our Pods: Self-Service Chaos Engineering for 1000+ Microservices at a Bank", kind: "talk", dateLabel: "14 Kasım", startTime: "13:45", endTime: "14:15", speakerIds: ["mert-polat"] },
     ],
   },
 ];
