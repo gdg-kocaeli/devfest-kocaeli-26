@@ -3,6 +3,7 @@ import { ContactSection } from "@/features/devfest/components/contact/contact-se
 import { GallerySection } from "@/features/devfest/components/gallery/gallery-section";
 import { OriaverseSection } from "@/features/devfest/components/hero/oriaverse-section";
 import { AndroidGiveawaySection } from "@/features/devfest/components/hero/android-giveaway-section";
+import { JetBrainsGiveawaySection } from "@/features/devfest/components/hero/jetbrains-giveaway-section";
 import {
   HeroBackdrop,
   HeroSection,
@@ -42,6 +43,7 @@ export default function Home() {
         <HeroSection />
         <OriaverseSection />
         <AndroidGiveawaySection />
+        <JetBrainsGiveawaySection />
         <SponsorsSection />
         <SpeakersSection />
         <ProgramSection />
