@@ -4,6 +4,7 @@ import { GallerySection } from "@/features/devfest/components/gallery/gallery-se
 import { OriaverseSection } from "@/features/devfest/components/hero/oriaverse-section";
 import { AndroidGiveawaySection } from "@/features/devfest/components/hero/android-giveaway-section";
 import { JetBrainsGiveawaySection } from "@/features/devfest/components/hero/jetbrains-giveaway-section";
+import { EuropeCodingSchoolGiveawaySection } from "@/features/devfest/components/hero/europe-coding-school-giveaway-section";
 import {
   HeroBackdrop,
   HeroSection,
@@ -44,6 +45,7 @@ export default function Home() {
         <OriaverseSection />
         <AndroidGiveawaySection />
         <JetBrainsGiveawaySection />
+        <EuropeCodingSchoolGiveawaySection />
         <SponsorsSection />
         <SpeakersSection />
         <ProgramSection />
